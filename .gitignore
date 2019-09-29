@@ -1,0 +1,4 @@
+# Ignore Unix excutable file
+*
+!*.*
+!*/
