@@ -1,0 +1,25 @@
+{
+  // See https://go.microsoft.com/fwlink/?LinkId=733558
+  // for the documentation about the tasks.json format
+  "version": "2.0.0",
+  "tasks": [
+    {
+      "label": "Compile",
+      // "type": "shell",
+      "command": "clang++",
+      "args": [
+        "${file}",
+        "-o", // 指定输出文件名，不加该参数则默认输出a.exe  
+        "${fileDirname}/${fileBasenameNoExtension}.out",
+        "-g", // 生成和调试有关的信息  
+        "-Wall", // 开启额外警告   
+        "-fcolor-diagnostics",
+        "-std=c++17" // cpp最新标准为c11，或根据自己的需要进行修改  
+      ],
+      "group": {
+        "kind": "build",
+        "isDefault": true
+      }
+    }
+  ]
+}
